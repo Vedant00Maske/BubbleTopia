@@ -239,13 +239,13 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qggph"]
-radius = 12.0
-height = 78.0
+radius = 16.0
+height = 102.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(1.5, 1.5)
 collision_layer = 2
 collision_mask = 17
 script = ExtResource("1_v0rlr")
@@ -256,7 +256,7 @@ sprite_frames = SubResource("SpriteFrames_pf58t")
 animation = &"walk0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(11, -9)
+position = Vector2(10, -3)
 shape = SubResource("CapsuleShape2D_qggph")
 
 [node name="ShootTimer" type="Timer" parent="."]
