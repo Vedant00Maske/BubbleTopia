@@ -773,7 +773,7 @@ texture = ExtResource("1_bhek2")
 [sub_resource type="TileSet" id="TileSet_gncnd"]
 sources/0 = SubResource("TileSetAtlasSource_2gig2")
 
-[node name="level2" type="Node2D"]
+[node name="level_2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

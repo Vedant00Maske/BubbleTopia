@@ -25,3 +25,7 @@ func _on_enemy_spawner_hit_p() -> void:
 	lives -= 1
 	$HUD_Level1/LivesLabel.text = "X " + str(lives)
 	emit_signal("player_damaged")  # Emit signal when player is hit
+
+
+func _on_door_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scenes/level_2.tscn")
