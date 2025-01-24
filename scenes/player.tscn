@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c2y85ff6tytq8"]
+[gd_scene load_steps=29 format=3 uid="uid://t53jvt2jpkha"]
 
 [ext_resource type="Texture2D" uid="uid://duij26piy4nbr" path="res://assets/player/mer_8_3.png" id="1_7kqxe"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_v0rlr"]
@@ -239,13 +239,13 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qggph"]
-radius = 20.8333
-height = 105.0
+radius = 12.0
+height = 78.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 texture_filter = 1
-scale = Vector2(1.2, 1.2)
+scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 17
 script = ExtResource("1_v0rlr")
@@ -256,7 +256,7 @@ sprite_frames = SubResource("SpriteFrames_pf58t")
 animation = &"walk0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5.83333, -5.83333)
+position = Vector2(11, -9)
 shape = SubResource("CapsuleShape2D_qggph")
 
 [node name="ShootTimer" type="Timer" parent="."]

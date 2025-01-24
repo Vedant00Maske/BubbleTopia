@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dox8cggnn35so"]
+[gd_scene load_steps=7 format=3 uid="uid://lvyvpoqt2f2a"]
 
 [ext_resource type="Texture2D" uid="uid://q2t0i05b0cwo" path="res://tf_atlantis_tiles.png" id="1_bhek2"]
-[ext_resource type="PackedScene" path="res://bubble_wall_1.tscn" id="2_rp45u"]
+[ext_resource type="PackedScene" uid="uid://k6n7g4u728wh" path="res://bubble_wall_1.tscn" id="2_rp45u"]
+[ext_resource type="PackedScene" uid="uid://bk0frkokc75f6" path="res://scenes/character_body_2d.tscn" id="3_8ni6r"]
+[ext_resource type="Script" path="res://scenes/character_body_2d.gd" id="4_4pp5w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2gig2"]
 texture = ExtResource("1_bhek2")
@@ -773,7 +775,8 @@ texture = ExtResource("1_bhek2")
 [sub_resource type="TileSet" id="TileSet_gncnd"]
 sources/0 = SubResource("TileSetAtlasSource_2gig2")
 
-[node name="level_2" type="Node2D"]
+[node name="level2" type="Node2D"]
+scale = Vector2(4, 2.667)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -790,11 +793,1227 @@ layer_2/tile_data = PackedInt32Array(1441795, 1114112, 12, 1507331, 1114112, 13,
 layer_3/name = "Layer3"
 layer_3/tile_data = PackedInt32Array(1507331, 1572864, 14, 1507332, 1572864, 14, 1507333, 1572864, 14, 1507334, 1572864, 14, 1507335, 1572864, 14, 1507336, 1572864, 14, 1507337, 1572864, 14, 1507338, 1572864, 14, 1507339, 1572864, 14, 1507340, 1572864, 14, 1507341, 1572864, 14, 1507342, 1572864, 14, 1507343, 1572864, 14, 1507344, 1572864, 14, 1507345, 1572864, 14, 1507346, 1572864, 14, 1507347, 1572864, 14, 1507348, 1572864, 14, 1507349, 1572864, 14, 1507350, 1572864, 14, 1507351, 1572864, 14, 1507352, 1572864, 14, 1507356, 1572864, 14, 1507357, 1638400, 14, 1507355, 1572864, 14, 1507354, 1572864, 14, 1507353, 1572864, 14, 1441821, 1572864, 1610612750, 1376285, 1572864, 1610612750, 1310749, 1572864, 1610612750, 1245213, 1572864, 1610612750, 1179677, 1572864, 1610612750, 1114141, 1572864, 1610612750, 1048605, 1572864, 1610612750, 983069, 1572864, 1610612750, 917533, 1572864, 1610612750, 851997, 1572864, 1610612750, 786461, 1572864, 1610612750, 720925, 1572864, 1610612750, 655389, 1572864, 1610612750, 589853, 1572864, 1610612750, 524317, 1572864, 1610612750, 458781, 1572864, 1610612750, 393245, 1572864, 1610612750, 327709, 1572864, 1610612750, 262173, 1572864, 1610612750, 196637, 1572864, 1610612750, 131101, 1572864, 1610612750, 28, 1572864, 805306382, 27, 1572864, 805306382, 26, 1572864, 805306382, 24, 1572864, 805306382, 23, 1572864, 805306382, 22, 1572864, 805306382, 25, 1572864, 805306382, 21, 1572864, 805306382, 20, 1572864, 805306382, 19, 1572864, 805306382, 18, 1572864, 805306382, 17, 1572864, 805306382, 16, 1572864, 805306382, 15, 1572864, 805306382, 14, 1572864, 805306382, 13, 1572864, 805306382, 12, 1572864, 805306382, 11, 1572864, 805306382, 6, 1572864, 805306382, 5, 1572864, 805306382, 4, 1572864, 805306382, 3, 1572864, 805306382, 2, 1572864, 805306382, 1, 1572864, 805306382, 0, 1638400, 12, 7, 1572864, 805306382, 8, 1572864, 805306382, 9, 1572864, 805306382, 10, 1572864, 805306382, 65536, 1572864, 1342177294, 131072, 1572864, 1342177294, 196608, 1572864, 1342177294, 262144, 1572864, 1342177294, 327680, 1572864, 1342177294, 393216, 1572864, 1342177294, 458752, 1572864, 1342177294, 524288, 1572864, 1342177294, 589824, 1572864, 1342177294, 655360, 1572864, 1342177294, 720896, 1572864, 1342177294, 786432, 1572864, 1342177294, 851968, 1572864, 1342177294, 917504, 1572864, 1342177294, 983040, 1572864, 1342177294, 1048576, 1572864, 1342177294, 1114112, 1572864, 1342177294, 1179648, 1572864, 1342177294, 1245184, 1572864, 1342177294, 1310720, 1572864, 1342177294, 1376256, 1572864, 1342177294, 1441792, 1572864, 1342177294, 786450, 1114112, 9, 786451, 917504, 8, 917522, 1179648, 9, 131085, 1179648, 14, 262155, 1179648, 14, 786437, 1179648, 14, 1376271, 1245184, 14, 1507328, 1638400, 14, 1376260, 917504, 14)
 
-[node name="BubbleWall1" parent="TileMap" instance=ExtResource("2_rp45u")]
-position = Vector2(22, 344)
+[node name="BubbleWall1" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(21, 22)
+collision_layer = 0
+collision_mask = 0
 
-[node name="BubbleWall2" parent="TileMap" instance=ExtResource("2_rp45u")]
-position = Vector2(22, 303)
+[node name="BubbleWall2" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 316)
 
-[node name="BubbleWall3" parent="TileMap" instance=ExtResource("2_rp45u")]
-position = Vector2(22, 324)
+[node name="BubbleWall3" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 338)
+
+[node name="BubbleWall4" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(21, 293)
+
+[node name="BubbleWall5" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(21, 271)
+
+[node name="BubbleWall6" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(20, 249)
+
+[node name="BubbleWall7" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(21, 228)
+
+[node name="BubbleWall8" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 206)
+
+[node name="BubbleWall9" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 183)
+
+[node name="BubbleWall10" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 162)
+
+[node name="BubbleWall11" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(23, 142)
+
+[node name="BubbleWall12" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 122)
+
+[node name="BubbleWall13" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 103)
+
+[node name="BubbleWall14" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 84)
+
+[node name="BubbleWall15" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(22, 63)
+
+[node name="BubbleWall16" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(21, 43)
+
+[node name="BubbleWall17" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(42, 271)
+
+[node name="BubbleWall18" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(42, 293)
+
+[node name="BubbleWall19" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(43, 316)
+
+[node name="BubbleWall20" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(43, 338)
+
+[node name="BubbleWall21" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(41, 250)
+
+[node name="BubbleWall22" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(42, 229)
+
+[node name="BubbleWall23" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(43, 207)
+
+[node name="BubbleWall24" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(43, 185)
+
+[node name="BubbleWall25" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(42, 163)
+
+[node name="BubbleWall26" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(44, 144)
+
+[node name="BubbleWall27" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(43, 123)
+
+[node name="BubbleWall28" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(43, 103)
+
+[node name="BubbleWall29" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(43, 83)
+
+[node name="BubbleWall30" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(43, 63)
+
+[node name="BubbleWall31" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(42, 42)
+
+[node name="BubbleWall32" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(42, 21)
+
+[node name="BubbleWall33" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(62, 21)
+
+[node name="BubbleWall34" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(62, 41)
+
+[node name="BubbleWall35" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(62, 62)
+
+[node name="BubbleWall36" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(63, 83)
+
+[node name="BubbleWall37" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(63, 103)
+
+[node name="BubbleWall38" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(63, 123)
+
+[node name="BubbleWall39" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(64, 143)
+
+[node name="BubbleWall40" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(63, 163)
+
+[node name="BubbleWall41" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(64, 184)
+
+[node name="BubbleWall42" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(64, 205)
+
+[node name="BubbleWall43" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(64, 205)
+
+[node name="BubbleWall44" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(63, 228)
+
+[node name="BubbleWall45" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(63, 249)
+
+[node name="BubbleWall46" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(63, 270)
+
+[node name="BubbleWall47" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(62, 292)
+
+[node name="BubbleWall48" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(64, 316)
+
+[node name="BubbleWall49" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(64, 338)
+
+[node name="BubbleWall50" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(64, 359)
+
+[node name="BubbleWall51" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(84, 359)
+
+[node name="BubbleWall52" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(84, 338)
+
+[node name="BubbleWall53" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(83, 316)
+
+[node name="BubbleWall54" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(83, 294)
+
+[node name="BubbleWall55" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(84, 271)
+
+[node name="BubbleWall56" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(84, 250)
+
+[node name="BubbleWall57" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(84, 229)
+
+[node name="BubbleWall58" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(85, 205)
+
+[node name="BubbleWall59" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(85, 184)
+
+[node name="BubbleWall60" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(85, 163)
+
+[node name="BubbleWall61" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(85, 143)
+
+[node name="BubbleWall62" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(85, 122)
+
+[node name="BubbleWall63" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(85, 101)
+
+[node name="BubbleWall64" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(85, 82)
+
+[node name="BubbleWall65" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(84, 62)
+
+[node name="BubbleWall66" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(83, 42)
+
+[node name="BubbleWall67" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(83, 21)
+
+[node name="BubbleWall68" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(104, 20)
+
+[node name="BubbleWall69" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(103, 41)
+
+[node name="BubbleWall70" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(104, 61)
+
+[node name="BubbleWall71" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(106, 82)
+
+[node name="BubbleWall72" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(106, 101)
+
+[node name="BubbleWall73" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(105, 121)
+
+[node name="BubbleWall74" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(105, 142)
+
+[node name="BubbleWall75" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(105, 162)
+
+[node name="BubbleWall76" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(104, 185)
+
+[node name="BubbleWall77" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(105, 205)
+
+[node name="BubbleWall78" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(104, 227)
+
+[node name="BubbleWall79" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(105, 248)
+
+[node name="BubbleWall80" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(106, 271)
+
+[node name="BubbleWall81" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(105, 293)
+
+[node name="BubbleWall82" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(105, 315)
+
+[node name="BubbleWall83" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(106, 336)
+
+[node name="BubbleWall84" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(106, 357)
+
+[node name="BubbleWall85" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(126, 358)
+
+[node name="BubbleWall86" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(127, 336)
+
+[node name="BubbleWall87" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(126, 315)
+
+[node name="BubbleWall88" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(126, 294)
+
+[node name="BubbleWall89" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(127, 273)
+
+[node name="BubbleWall90" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(125, 250)
+
+[node name="BubbleWall91" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(124, 228)
+
+[node name="BubbleWall92" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(125, 207)
+
+[node name="BubbleWall93" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(124, 185)
+
+[node name="BubbleWall94" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(124, 164)
+
+[node name="BubbleWall95" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(125, 143)
+
+[node name="BubbleWall96" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(125, 121)
+
+[node name="BubbleWall97" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(126, 101)
+
+[node name="BubbleWall98" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(126, 82)
+
+[node name="BubbleWall99" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(125, 62)
+
+[node name="BubbleWall100" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(124, 41)
+
+[node name="BubbleWall101" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(124, 21)
+
+[node name="BubbleWall102" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(145, 21)
+
+[node name="BubbleWall103" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(145, 40)
+
+[node name="BubbleWall104" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 62)
+
+[node name="BubbleWall105" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 82)
+
+[node name="BubbleWall106" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 102)
+
+[node name="BubbleWall107" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(145, 121)
+
+[node name="BubbleWall108" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 143)
+
+[node name="BubbleWall109" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 163)
+
+[node name="BubbleWall110" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 186)
+
+[node name="BubbleWall111" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(147, 209)
+
+[node name="BubbleWall112" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 228)
+
+[node name="BubbleWall113" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 250)
+
+[node name="BubbleWall114" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(146, 272)
+
+[node name="BubbleWall115" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(145, 293)
+
+[node name="BubbleWall116" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(145, 315)
+
+[node name="BubbleWall117" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(147, 336)
+
+[node name="BubbleWall118" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(148, 359)
+
+[node name="BubbleWall119" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(169, 359)
+
+[node name="BubbleWall120" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(168, 338)
+
+[node name="BubbleWall121" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 317)
+
+[node name="BubbleWall122" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 296)
+
+[node name="BubbleWall123" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(166, 273)
+
+[node name="BubbleWall124" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(165, 252)
+
+[node name="BubbleWall125" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(166, 231)
+
+[node name="BubbleWall126" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 210)
+
+[node name="BubbleWall127" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(166, 188)
+
+[node name="BubbleWall128" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(166, 164)
+
+[node name="BubbleWall129" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 143)
+
+[node name="BubbleWall130" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 122)
+
+[node name="BubbleWall131" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 82)
+
+[node name="BubbleWall133" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 62)
+
+[node name="BubbleWall134" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 41)
+
+[node name="BubbleWall135" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(166, 22)
+
+[node name="BubbleWall136" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(186, 22)
+
+[node name="BubbleWall137" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 40)
+
+[node name="BubbleWall138" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 61)
+
+[node name="BubbleWall139" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 82)
+
+[node name="BubbleWall140" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 101)
+
+[node name="BubbleWall141" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 123)
+
+[node name="BubbleWall142" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 143)
+
+[node name="BubbleWall143" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(186, 164)
+
+[node name="BubbleWall144" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 186)
+
+[node name="BubbleWall145" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 209)
+
+[node name="BubbleWall146" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(186, 231)
+
+[node name="BubbleWall147" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(186, 251)
+
+[node name="BubbleWall148" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(186, 274)
+
+[node name="BubbleWall149" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 295)
+
+[node name="BubbleWall150" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(187, 315)
+
+[node name="BubbleWall151" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(188, 338)
+
+[node name="BubbleWall152" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(188, 359)
+
+[node name="BubbleWall153" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(209, 360)
+
+[node name="BubbleWall154" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(209, 339)
+
+[node name="BubbleWall155" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(209, 317)
+
+[node name="BubbleWall156" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(209, 296)
+
+[node name="BubbleWall157" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(208, 275)
+
+[node name="BubbleWall158" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(207, 252)
+
+[node name="BubbleWall159" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(207, 232)
+
+[node name="BubbleWall160" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(206, 210)
+
+[node name="BubbleWall161" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(207, 188)
+
+[node name="BubbleWall162" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(207, 166)
+
+[node name="BubbleWall163" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(208, 144)
+
+[node name="BubbleWall164" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(208, 123)
+
+[node name="BubbleWall165" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(208, 102)
+
+[node name="BubbleWall166" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(208, 82)
+
+[node name="BubbleWall167" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(208, 61)
+
+[node name="BubbleWall168" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(207, 41)
+
+[node name="BubbleWall169" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(207, 22)
+
+[node name="BubbleWall170" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(227, 23)
+
+[node name="BubbleWall171" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(228, 43)
+
+[node name="BubbleWall172" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 62)
+
+[node name="BubbleWall173" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 82)
+
+[node name="BubbleWall174" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 103)
+
+[node name="BubbleWall175" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 123)
+
+[node name="BubbleWall176" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 143)
+
+[node name="BubbleWall177" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 165)
+
+[node name="BubbleWall178" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(228, 187)
+
+[node name="BubbleWall179" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(228, 208)
+
+[node name="BubbleWall180" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(228, 231)
+
+[node name="BubbleWall181" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(228, 252)
+
+[node name="BubbleWall182" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(228, 273)
+
+[node name="BubbleWall183" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(228, 294)
+
+[node name="BubbleWall184" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 316)
+
+[node name="BubbleWall185" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 338)
+
+[node name="BubbleWall186" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(229, 360)
+
+[node name="BubbleWall187" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(249, 361)
+
+[node name="BubbleWall188" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(249, 339)
+
+[node name="BubbleWall189" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 316)
+
+[node name="BubbleWall190" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(247, 295)
+
+[node name="BubbleWall191" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 273)
+
+[node name="BubbleWall192" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(249, 253)
+
+[node name="BubbleWall193" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(249, 232)
+
+[node name="BubbleWall194" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(249, 211)
+
+[node name="BubbleWall195" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(249, 189)
+
+[node name="BubbleWall196" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 166)
+
+[node name="BubbleWall197" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(249, 144)
+
+[node name="BubbleWall198" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 123)
+
+[node name="BubbleWall199" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 103)
+
+[node name="BubbleWall200" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 82)
+
+[node name="BubbleWall201" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 62)
+
+[node name="BubbleWall202" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 43)
+
+[node name="BubbleWall203" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(248, 23)
+
+[node name="BubbleWall204" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(268, 23)
+
+[node name="BubbleWall205" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(269, 44)
+
+[node name="BubbleWall206" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(268, 64)
+
+[node name="BubbleWall207" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(268, 83)
+
+[node name="BubbleWall208" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(267, 102)
+
+[node name="BubbleWall209" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(268, 121)
+
+[node name="BubbleWall210" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(269, 141)
+
+[node name="BubbleWall211" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(269, 166)
+
+[node name="BubbleWall212" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(269, 189)
+
+[node name="BubbleWall213" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(269, 211)
+
+[node name="BubbleWall214" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(268, 232)
+
+[node name="BubbleWall215" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(269, 253)
+
+[node name="BubbleWall216" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(268, 274)
+
+[node name="BubbleWall217" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(268, 294)
+
+[node name="BubbleWall218" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(267, 315)
+
+[node name="BubbleWall219" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(269, 338)
+
+[node name="BubbleWall220" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(270, 361)
+
+[node name="BubbleWall221" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(290, 362)
+
+[node name="BubbleWall222" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(290, 339)
+
+[node name="BubbleWall223" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(289, 316)
+
+[node name="BubbleWall224" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(288, 296)
+
+[node name="BubbleWall225" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(289, 275)
+
+[node name="BubbleWall226" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(290, 254)
+
+[node name="BubbleWall227" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(289, 233)
+
+[node name="BubbleWall228" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(289, 212)
+
+[node name="BubbleWall229" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(290, 190)
+
+[node name="BubbleWall230" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(289, 168)
+
+[node name="BubbleWall231" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(289, 143)
+
+[node name="BubbleWall232" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(288, 121)
+
+[node name="BubbleWall233" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(288, 101)
+
+[node name="BubbleWall234" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(288, 83)
+
+[node name="BubbleWall235" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(288, 64)
+
+[node name="BubbleWall236" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(288, 44)
+
+[node name="BubbleWall237" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(288, 23)
+
+[node name="BubbleWall238" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(308, 23)
+
+[node name="BubbleWall239" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(308, 44)
+
+[node name="BubbleWall240" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(309, 64)
+
+[node name="BubbleWall241" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(310, 83)
+
+[node name="BubbleWall242" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(309, 102)
+
+[node name="BubbleWall243" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(309, 122)
+
+[node name="BubbleWall244" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(309, 143)
+
+[node name="BubbleWall245" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(309, 166)
+
+[node name="BubbleWall246" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(309, 190)
+
+[node name="BubbleWall247" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(309, 212)
+
+[node name="BubbleWall248" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(310, 233)
+
+[node name="BubbleWall249" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(310, 253)
+
+[node name="BubbleWall250" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(310, 273)
+
+[node name="BubbleWall251" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(310, 294)
+
+[node name="BubbleWall252" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(310, 315)
+
+[node name="BubbleWall253" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(309, 339)
+
+[node name="BubbleWall254" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(310, 361)
+
+[node name="BubbleWall255" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(331, 361)
+
+[node name="BubbleWall256" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(330, 340)
+
+[node name="BubbleWall257" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(330, 317)
+
+[node name="BubbleWall258" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(330, 296)
+
+[node name="BubbleWall259" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(330, 274)
+
+[node name="BubbleWall260" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(330, 254)
+
+[node name="BubbleWall261" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(330, 234)
+
+[node name="BubbleWall262" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(329, 213)
+
+[node name="BubbleWall263" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(329, 191)
+
+[node name="BubbleWall264" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(328, 167)
+
+[node name="BubbleWall265" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(329, 146)
+
+[node name="BubbleWall266" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(329, 123)
+
+[node name="BubbleWall267" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(329, 103)
+
+[node name="BubbleWall268" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(330, 83)
+
+[node name="BubbleWall269" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(330, 63)
+
+[node name="BubbleWall270" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(329, 44)
+rotation = 1.27513
+
+[node name="BubbleWall271" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(328, 23)
+rotation = 1.27513
+
+[node name="BubbleWall272" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(348, 23)
+rotation = 1.27513
+
+[node name="BubbleWall273" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(349, 43)
+rotation = 1.27513
+
+[node name="BubbleWall274" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(350, 64)
+rotation = 1.27513
+
+[node name="BubbleWall275" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(352, 84)
+rotation = 3.14159
+
+[node name="BubbleWall276" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 103)
+rotation = 3.14159
+
+[node name="BubbleWall277" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 123)
+rotation = 3.14159
+
+[node name="BubbleWall278" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 145)
+rotation = 3.14159
+
+[node name="BubbleWall279" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(350, 166)
+rotation = 3.14159
+
+[node name="BubbleWall280" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 188)
+rotation = 3.14159
+
+[node name="BubbleWall281" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(352, 212)
+rotation = 3.14159
+
+[node name="BubbleWall282" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 233)
+rotation = 3.14159
+
+[node name="BubbleWall283" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(352, 253)
+rotation = 3.14159
+
+[node name="BubbleWall284" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 274)
+rotation = 3.14159
+
+[node name="BubbleWall285" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 295)
+rotation = 3.14159
+
+[node name="BubbleWall286" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 318)
+rotation = 3.14159
+
+[node name="BubbleWall287" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(351, 341)
+rotation = 3.14159
+
+[node name="BubbleWall288" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(352, 362)
+rotation = 3.14159
+
+[node name="BubbleWall289" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(373, 362)
+rotation = 3.14159
+
+[node name="BubbleWall290" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(372, 342)
+rotation = 3.14159
+
+[node name="BubbleWall291" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(372, 232)
+rotation = 1.57079
+
+[node name="BubbleWall296" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(373, 212)
+rotation = 1.57079
+
+[node name="BubbleWall297" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(372, 190)
+rotation = 1.57079
+
+[node name="BubbleWall298" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(371, 168)
+rotation = 1.57079
+
+[node name="BubbleWall299" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(371, 147)
+rotation = 1.57079
+
+[node name="BubbleWall300" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(372, 124)
+rotation = 1.57079
+
+[node name="BubbleWall301" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(372, 103)
+rotation = 1.57079
+
+[node name="BubbleWall302" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(372, 82)
+rotation = 1.57079
+
+[node name="BubbleWall303" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(371, 62)
+rotation = 1.57079
+
+[node name="BubbleWall304" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(371, 43)
+rotation = 1.57079
+
+[node name="BubbleWall305" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(371, 23)
+rotation = 1.57079
+
+[node name="BubbleWall306" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(391, 23)
+rotation = 1.57079
+
+[node name="BubbleWall307" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(391, 43)
+rotation = 1.57079
+
+[node name="BubbleWall308" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(392, 62)
+rotation = 1.57079
+
+[node name="BubbleWall309" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(392, 82)
+rotation = 1.57079
+
+[node name="BubbleWall310" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(392, 102)
+rotation = 1.57079
+
+[node name="BubbleWall311" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(392, 123)
+rotation = 1.57079
+
+[node name="BubbleWall312" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(392, 146)
+rotation = 1.57079
+
+[node name="BubbleWall313" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(391, 167)
+rotation = 1.57079
+
+[node name="BubbleWall314" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(392, 188)
+rotation = 1.57079
+
+[node name="BubbleWall315" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(392, 211)
+rotation = 1.57079
+
+[node name="BubbleWall316" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(393, 232)
+rotation = 1.57079
+
+[node name="BubbleWall317" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(393, 252)
+rotation = 1.57079
+
+[node name="BubbleWall318" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(394, 275)
+rotation = 1.57079
+
+[node name="BubbleWall319" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(394, 297)
+rotation = 1.57079
+
+[node name="BubbleWall320" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(393, 318)
+rotation = 1.57079
+
+[node name="BubbleWall321" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(392, 340)
+rotation = 1.57079
+
+[node name="BubbleWall322" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(393, 361)
+rotation = 1.57079
+
+[node name="BubbleWall323" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(414, 361)
+rotation = 1.57079
+
+[node name="BubbleWall324" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(437, 362)
+rotation = 1.57079
+
+[node name="BubbleWall325" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(458, 361)
+rotation = 1.57079
+
+[node name="BubbleWall326" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(413, 341)
+rotation = 1.57079
+
+[node name="BubbleWall327" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(436, 342)
+rotation = 1.57079
+
+[node name="BubbleWall328" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(458, 342)
+rotation = 1.57079
+
+[node name="BubbleWall329" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(458, 321)
+rotation = 1.57079
+
+[node name="BubbleWall330" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(436, 320)
+rotation = 1.57079
+
+[node name="BubbleWall331" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(415, 319)
+rotation = 1.57079
+
+[node name="BubbleWall332" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(415, 298)
+rotation = 1.57079
+
+[node name="BubbleWall333" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(415, 276)
+rotation = 1.57079
+
+[node name="BubbleWall334" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(415, 254)
+rotation = 1.57079
+
+[node name="BubbleWall335" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(415, 233)
+rotation = 1.57079
+
+[node name="BubbleWall336" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(415, 212)
+rotation = 1.57079
+
+[node name="BubbleWall337" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(414, 189)
+rotation = 1.57079
+
+[node name="BubbleWall338" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(413, 168)
+rotation = 1.57079
+
+[node name="BubbleWall339" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(413, 147)
+rotation = 1.57079
+
+[node name="BubbleWall340" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(413, 125)
+rotation = 1.57079
+
+[node name="BubbleWall341" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(413, 104)
+rotation = 1.57079
+
+[node name="BubbleWall342" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(413, 83)
+rotation = 1.57079
+
+[node name="BubbleWall343" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(413, 63)
+rotation = 1.57079
+
+[node name="BubbleWall344" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(411, 43)
+rotation = 1.57079
+
+[node name="BubbleWall345" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(412, 23)
+rotation = 1.57079
+
+[node name="BubbleWall346" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(433, 23)
+rotation = 1.57079
+
+[node name="BubbleWall347" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(433, 43)
+rotation = 1.57079
+
+[node name="BubbleWall348" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(433, 64)
+rotation = 1.57079
+
+[node name="BubbleWall349" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(433, 83)
+rotation = 1.57079
+
+[node name="BubbleWall350" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(433, 104)
+rotation = 1.57079
+
+[node name="BubbleWall351" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(433, 124)
+rotation = 1.57079
+
+[node name="BubbleWall352" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(433, 145)
+rotation = 1.57079
+
+[node name="BubbleWall353" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(434, 168)
+rotation = 1.57079
+
+[node name="BubbleWall354" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(435, 211)
+rotation = 1.57079
+
+[node name="BubbleWall356" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(436, 234)
+rotation = 1.57079
+
+[node name="BubbleWall357" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(436, 254)
+rotation = 1.57079
+
+[node name="BubbleWall358" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(437, 277)
+rotation = 1.57079
+
+[node name="BubbleWall359" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(437, 297)
+rotation = 1.57079
+
+[node name="BubbleWall360" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(458, 298)
+rotation = 1.57079
+
+[node name="BubbleWall361" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(458, 277)
+rotation = 1.57079
+
+[node name="BubbleWall362" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(457, 255)
+rotation = 1.57079
+
+[node name="BubbleWall363" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(457, 234)
+rotation = 1.57079
+
+[node name="BubbleWall364" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(456, 210)
+rotation = 1.57079
+
+[node name="BubbleWall365" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(457, 189)
+rotation = 1.57079
+
+[node name="BubbleWall366" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(457, 168)
+rotation = 1.57079
+
+[node name="BubbleWall367" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(457, 147)
+rotation = 1.57079
+
+[node name="BubbleWall368" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(457, 126)
+rotation = 1.57079
+
+[node name="BubbleWall369" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(456, 104)
+rotation = 1.57079
+
+[node name="BubbleWall370" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(457, 83)
+rotation = 1.57079
+
+[node name="BubbleWall371" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(456, 65)
+rotation = 1.57079
+
+[node name="BubbleWall372" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(457, 45)
+rotation = 1.57079
+
+[node name="BubbleWall355" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(435, 187)
+rotation = 1.44376
+
+[node name="BubbleWall292" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(372, 319)
+rotation = 1.57079
+
+[node name="BubbleWall295" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(373, 253)
+rotation = 1.57079
+
+[node name="BubbleWall293" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(372, 276)
+rotation = 1.69074
+
+[node name="BubbleWall294" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(371, 297)
+rotation = 1.69074
+
+[node name="BubbleWall132" parent="." instance=ExtResource("2_rp45u")]
+position = Vector2(167, 101)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_8ni6r")]
+position = Vector2(-139, -245.219)
+script = ExtResource("4_4pp5w")
