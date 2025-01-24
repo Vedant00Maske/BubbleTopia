@@ -1,0 +1,8 @@
+res://scenes/main.tscn
+res://shaders/water.gdshader
+res://scenes/player.tscn
+res://scenes/enemy.tscn
+res://scenes/enemy_spawner.tscn
+res://scenes/bubble_bullet.tscn
+res://scenes/enemy_explosion.tscn
+res://bubble_wall_1.tscn
