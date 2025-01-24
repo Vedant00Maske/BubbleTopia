@@ -28,23 +28,24 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqdge"]
-radius = 31.7647
+radius = 34.1176
 height = 91.7647
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kboat"]
-radius = 32.9412
-height = 89.4118
+radius = 35.2941
+height = 96.4706
 
 [node name="Enemy2" type="CharacterBody2D"]
 texture_filter = 1
 scale = Vector2(0.85, 0.85)
 collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_ybbkr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_8hj2d")
-animation = &"die"
+animation = &"swim"
 autoplay = "swim"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -60,7 +61,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -3.52941)
+position = Vector2(1.19209e-07, -3.52941)
 shape = SubResource("CapsuleShape2D_kboat")
 
 [connection signal="timeout" from="EntranceTimer" to="." method="_on_entrance_timer_timeout"]

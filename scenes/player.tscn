@@ -239,8 +239,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qggph"]
-radius = 12.0
-height = 78.0
+radius = 20.8333
+height = 105.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -256,7 +256,7 @@ sprite_frames = SubResource("SpriteFrames_pf58t")
 animation = &"walk0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(11, -9)
+position = Vector2(5.83333, -5.83333)
 shape = SubResource("CapsuleShape2D_qggph")
 
 [node name="ShootTimer" type="Timer" parent="."]

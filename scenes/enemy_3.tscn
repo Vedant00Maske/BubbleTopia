@@ -28,15 +28,16 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iq6px"]
-radius = 30.0
-height = 80.0
+radius = 33.0
+height = 82.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_htom8"]
-radius = 30.0
-height = 78.0
+radius = 32.0
+height = 82.0
 
 [node name="Enemy3" type="CharacterBody2D"]
 collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_0e1cg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

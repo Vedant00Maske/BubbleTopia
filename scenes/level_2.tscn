@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dox8cggnn35so"]
 
 [ext_resource type="Texture2D" uid="uid://q2t0i05b0cwo" path="res://tf_atlantis_tiles.png" id="1_bhek2"]
-[ext_resource type="PackedScene" uid="uid://cp2qo7buljqoe" path="res://bubble_wall_1.tscn" id="2_rp45u"]
+[ext_resource type="PackedScene" path="res://bubble_wall_1.tscn" id="2_rp45u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2gig2"]
 texture = ExtResource("1_bhek2")
