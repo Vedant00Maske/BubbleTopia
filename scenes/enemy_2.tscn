@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://web4r4osqr7l"]
+
+[ext_resource type="Texture2D" uid="uid://cegcx1ea0tigm" path="res://assets/enemy/pink_enemy/alienPink_swim1.png" id="1_041t6"]
+[ext_resource type="Script" path="res://scripts/enemy_2.gd" id="1_ybbkr"]
+[ext_resource type="Texture2D" uid="uid://c6uydlklp7bh8" path="res://assets/enemy/pink_enemy/alienPink_badge2.png" id="2_2ko6r"]
+[ext_resource type="Texture2D" uid="uid://cjrxptfr4dlql" path="res://assets/enemy/pink_enemy/alienPink_swim2.png" id="2_5iu0r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8hj2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2ko6r")
+}],
+"loop": true,
+"name": &"die",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_041t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5iu0r")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqdge"]
+radius = 31.7647
+height = 91.7647
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kboat"]
+radius = 32.9412
+height = 89.4118
+
+[node name="Enemy2" type="CharacterBody2D"]
+texture_filter = 1
+scale = Vector2(0.85, 0.85)
+collision_layer = 4
+script = ExtResource("1_ybbkr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_8hj2d")
+animation = &"die"
+autoplay = "swim"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.42109e-14, -2.35294)
+shape = SubResource("CapsuleShape2D_gqdge")
+
+[node name="EntranceTimer" type="Timer" parent="."]
+wait_time = 1.25
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -3.52941)
+shape = SubResource("CapsuleShape2D_kboat")
+
+[connection signal="timeout" from="EntranceTimer" to="." method="_on_entrance_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

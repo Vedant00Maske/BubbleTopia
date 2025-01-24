@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://dstpmawbd8sh8"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_o5v2b"]
-[ext_resource type="Texture2D" uid="uid://bm3ngk26m514u" path="res://assets/enemy/alienYellow_badge2.png" id="2_cw8mx"]
-[ext_resource type="Texture2D" uid="uid://cpsv0dgot0mjk" path="res://assets/enemy/alienYellow_swim1.png" id="3_sccuj"]
-[ext_resource type="Texture2D" uid="uid://cgyj31gddsmfc" path="res://assets/enemy/alienYellow_swim2.png" id="4_aw3ws"]
+[ext_resource type="Texture2D" uid="uid://bm3ngk26m514u" path="res://assets/enemy/yellow_enemy/alienYellow_badge2.png" id="2_gemxv"]
+[ext_resource type="Texture2D" uid="uid://cpsv0dgot0mjk" path="res://assets/enemy/yellow_enemy/alienYellow_swim1.png" id="3_xawad"]
+[ext_resource type="Texture2D" uid="uid://cgyj31gddsmfc" path="res://assets/enemy/yellow_enemy/alienYellow_swim2.png" id="4_fmwi1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h7olv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_cw8mx")
+"texture": ExtResource("2_gemxv")
 }],
 "loop": true,
 "name": &"die",
@@ -17,10 +17,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_sccuj")
+"texture": ExtResource("3_xawad")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_aw3ws")
+"texture": ExtResource("4_fmwi1")
 }],
 "loop": true,
 "name": &"swim",

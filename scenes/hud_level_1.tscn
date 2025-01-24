@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6vmamel3t6hb"]
 
 [ext_resource type="Texture2D" uid="uid://bw4ajnmu7y3b4" path="res://assets/items/heart.png" id="1_bjoto"]
-[ext_resource type="Texture2D" uid="uid://drrdavcpggdsq" path="res://assets/enemy/alienYellow_stand.png" id="2_vsw4b"]
+[ext_resource type="Texture2D" path="res://assets/enemy/alienYellow_stand.png" id="2_vsw4b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7qcg"]
 border_width_top = 2
