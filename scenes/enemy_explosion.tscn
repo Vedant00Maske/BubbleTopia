@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvwfwkehax5u4"]
+
+[ext_resource type="Script" path="res://scripts/enemy_explosion.gd" id="1_muuii"]
+
+[sub_resource type="Curve" id="Curve_0b8ht"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="EnemyExplosion" type="CPUParticles2D"]
+texture_filter = 1
+emitting = false
+amount = 20
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 5.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 90.0
+initial_velocity_max = 110.0
+scale_amount_min = 14.0
+scale_amount_max = 16.0
+scale_amount_curve = SubResource("Curve_0b8ht")
+color = Color(1, 0.298039, 0.227451, 1)
+script = ExtResource("1_muuii")

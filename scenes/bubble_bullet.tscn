@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://j0cjxdxhb85k"]
+
+[ext_resource type="Script" path="res://scripts/bubble_bullet.gd" id="1_mv4w5"]
+[ext_resource type="Texture2D" uid="uid://mcmcbydej7yh" path="res://assets/bullets/bubble_7.png" id="2_cxkv2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ajpr1"]
+radius = 26.0192
+
+[node name="Bubble" type="Area2D"]
+texture_filter = 1
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_mv4w5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_cxkv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ajpr1")
+
+[node name="BulletTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="BulletTimer" to="." method="_on_bullet_timer_timeout"]
