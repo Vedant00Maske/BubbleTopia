@@ -2015,5 +2015,5 @@ rotation = 1.69074
 position = Vector2(167, 101)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_8ni6r")]
-position = Vector2(-139, -245.219)
+position = Vector2(46, 6.74915)
 script = ExtResource("4_4pp5w")

@@ -846,7 +846,7 @@ sources/2 = SubResource("TileSetAtlasSource_i1wyq")
 sources/3 = SubResource("TileSetAtlasSource_spvh3")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ikjkt"]
-radius = 96.8762
+radius = 37.4833
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_h20c3")
@@ -906,7 +906,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door_to_lvl2"]
-position = Vector2(1048, 922)
+position = Vector2(1029, 900)
 shape = SubResource("CircleShape2D_ikjkt")
 
 [connection signal="shoot" from="Player" to="BulletManager" method="_on_player_shoot"]

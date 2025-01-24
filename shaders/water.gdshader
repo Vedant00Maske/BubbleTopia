@@ -26,7 +26,7 @@ void fragment() {
     vec4 water_color = texture(TEXTURE, UV + noise * wave_strength);
     
     // Much lighter blue color
-    vec4 light_blue = vec4(0.8, 0.9, 1.0, water_color.a); // Very light blue values
+    vec4 light_blue = vec4(0.4, 0.9, 1.0, water_color.a); // Very light blue values
     water_color = mix(water_color, light_blue, 0.8); // Higher mix factor for more prominence
     
     COLOR = water_color;

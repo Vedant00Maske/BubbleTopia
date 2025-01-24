@@ -10,7 +10,8 @@ signal enemy_killed
 func _ready() -> void:
 	level = 1
 	lives = 3
-	max_enemies = 30
+	max_enemies = 5
+
 	current_enemies = max_enemies
 	$HUD_Level1/LivesLabel.text = "X " + str(lives)
 	$HUD_Level1/EnemiesLabel.text = "X " + str(current_enemies)
@@ -30,6 +31,6 @@ func _on_enemy_spawner_hit_p() -> void:
 	emit_signal("player_damaged")
 
 func _on_door_to_lvl_2_body_entered(body: Node2D) -> void:
-	# Only change scene if all enemies are killed
+	# Check if all enemies are killed first
 	if can_transition:
 		get_tree().change_scene_to_file("res://scenes/level_2.tscn")

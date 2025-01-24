@@ -253,7 +253,8 @@ script = ExtResource("1_v0rlr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_pf58t")
-animation = &"walk0"
+animation = &"walk1"
+frame_progress = 0.745574
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10, -3)
