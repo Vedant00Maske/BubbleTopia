@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6vmamel3t6hb"]
+
+[ext_resource type="Texture2D" uid="uid://bw4ajnmu7y3b4" path="res://assets/items/heart.png" id="1_bjoto"]
+[ext_resource type="Texture2D" uid="uid://drrdavcpggdsq" path="res://assets/enemy/alienYellow_stand.png" id="2_vsw4b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7qcg"]
+border_width_top = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="HUD_Level1" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x7qcg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(88, 30)
+scale = Vector2(4, 4)
+texture = ExtResource("1_bjoto")
+
+[node name="LivesLabel" type="Label" parent="."]
+texture_filter = 1
+offset_left = 120.0
+offset_top = -3.0
+offset_right = 185.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 45
+text = "X 3"
+
+[node name="LevelLabel" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.5
+offset_right = 88.5
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+text = "LEVEL: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1644, 29)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_vsw4b")
+
+[node name="EnemiesLabel" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -243.0
+offset_top = -3.0
+offset_right = -152.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 45
+text = "X 10"
+horizontal_alignment = 1
+vertical_alignment = 1
