@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp2qo7buljqoe"]
+
+[ext_resource type="Texture2D" uid="uid://b0p55l66jm1se" path="res://assets/bullets/DarkBlue.png" id="1_momdf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4fgsf"]
+
+[node name="BubbleWall1" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4fgsf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_momdf")
