@@ -28,12 +28,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqdge"]
-radius = 34.1176
-height = 91.7647
+radius = 38.8235
+height = 105.882
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kboat"]
-radius = 35.2941
-height = 96.4706
+radius = 38.8235
+height = 105.882
 
 [node name="Enemy2" type="CharacterBody2D"]
 texture_filter = 1
@@ -49,7 +49,7 @@ animation = &"swim"
 autoplay = "swim"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.42109e-14, -2.35294)
+position = Vector2(1.69407e-21, 2.38419e-07)
 shape = SubResource("CapsuleShape2D_gqdge")
 
 [node name="EntranceTimer" type="Timer" parent="."]
@@ -61,7 +61,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.19209e-07, -3.52941)
+position = Vector2(1.17647, 0)
 shape = SubResource("CapsuleShape2D_kboat")
 
 [connection signal="timeout" from="EntranceTimer" to="." method="_on_entrance_timer_timeout"]

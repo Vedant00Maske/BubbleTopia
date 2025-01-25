@@ -9,7 +9,7 @@ signal hit_player
 
 var alive: bool = true
 var entered: bool = false
-var speed: int = 150
+var speed: int = 200
 var direction: Vector2
 
 func _ready() -> void:

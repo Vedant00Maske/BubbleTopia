@@ -22,11 +22,11 @@ void vertex() {
 
 // Called for every pixel the material is visible on.
 void fragment() {
-	 vec2 noise = 1.0 * texture(noise_texture, UV + speed*TIME).rg - vec2(1.0);
+	 vec2 noise = 0.9 * texture(noise_texture, UV + speed*TIME).rg - vec2(1.0);
     vec4 water_color = texture(TEXTURE, UV + noise * wave_strength);
     
     // Much lighter blue color
-    vec4 light_blue = vec4(0.4, 0.9, 1.0, water_color.a); // Very light blue values
+    vec4 light_blue = vec4(0.35, 0.9, 1.0, water_color.a); // Very light blue values
     water_color = mix(water_color, light_blue, 0.8); // Higher mix factor for more prominence
     
     COLOR = water_color;

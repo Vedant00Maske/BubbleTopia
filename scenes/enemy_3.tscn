@@ -29,11 +29,11 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iq6px"]
 radius = 33.0
-height = 82.0
+height = 90.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_htom8"]
-radius = 32.0
-height = 82.0
+radius = 33.0
+height = 88.0
 
 [node name="Enemy3" type="CharacterBody2D"]
 collision_layer = 4
@@ -59,7 +59,6 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -2)
 shape = SubResource("CapsuleShape2D_htom8")
 
 [connection signal="timeout" from="EntranceTimer" to="." method="_on_entrance_timer_timeout"]

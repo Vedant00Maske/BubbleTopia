@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://t53jvt2jpkha"]
+[gd_scene load_steps=28 format=3 uid="uid://t53jvt2jpkha"]
 
 [ext_resource type="Texture2D" uid="uid://duij26piy4nbr" path="res://assets/player/mer_8_3.png" id="1_7kqxe"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_v0rlr"]
@@ -238,17 +238,14 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qggph"]
-radius = 16.0
-height = 102.0
-
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 texture_filter = 1
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.25, 1.25)
 collision_layer = 2
 collision_mask = 17
 script = ExtResource("1_v0rlr")
+flash_color = Color(0.863436, 5.31845e-06, 7.70092e-07, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -256,9 +253,8 @@ sprite_frames = SubResource("SpriteFrames_pf58t")
 animation = &"walk1"
 frame_progress = 0.745574
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10, -3)
-shape = SubResource("CapsuleShape2D_qggph")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-13.6, -26.4, -14.4, -38.4, -9.6, -44.8, -2.4, -50.4, 20, -50.4, 29.6, -44.8, 28.8, -20, 22.4, -15.2, 39.2, -0.8, 39.2, 5.6, 33.6, 11.2, 32, 13.6, 23.2, 13.6, 23.2, 16, 23.2, 20, 20, 25.6, 17.6, 28.8, 23.2, 30.4, 29.6, 35.2, 29.6, 39.2, 22.4, 47.2, 12.8, 47.2, 12.8, 42.4, 4.8, 43.2, 4.8, 47.2, -6.4, 47.2, -6.4, 43.2, -10.4, 40, -12, 32, -1.6, 29.6, -4.8, 13.6, -17.6, 10.4, -23.2, 1.6, -18.4, -6.4, -8, -13.6)
 
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 0.3

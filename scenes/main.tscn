@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://csekg3x4swpej"]
+[gd_scene load_steps=25 format=3 uid="uid://csekg3x4swpej"]
 
 [ext_resource type="Texture2D" uid="uid://q2t0i05b0cwo" path="res://tf_atlantis_tiles.png" id="1_7mgwo"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_h20c3"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/bullet_manager.gd" id="10_rff2g"]
 [ext_resource type="PackedScene" uid="uid://j0cjxdxhb85k" path="res://scenes/bubble_bullet.tscn" id="11_75qb4"]
 [ext_resource type="PackedScene" uid="uid://c6vmamel3t6hb" path="res://scenes/hud_level_1.tscn" id="12_ga5fv"]
+[ext_resource type="PackedScene" uid="uid://fks2o8iy0lcc" path="res://scenes/level_1_over.tscn" id="13_ar8bl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c4okk"]
 texture = ExtResource("1_7mgwo")
@@ -910,18 +911,34 @@ collision_mask = 3
 position = Vector2(1029, 900)
 shape = SubResource("CircleShape2D_ikjkt")
 
-[node name="Label" type="Label" parent="."]
+[node name="Level1_To_Level2_Text" type="Label" parent="."]
 visible = false
-offset_left = 531.0
-offset_top = 571.0
-offset_right = 1366.0
-offset_bottom = 712.0
+offset_left = 511.0
+offset_top = 579.0
+offset_right = 1346.0
+offset_bottom = 720.0
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
 text = "Go near the cave and press E 
    ↓"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PlayerDead" type="Label" parent="."]
+visible = false
+offset_left = 405.0
+offset_top = 78.0
+offset_right = 1484.0
+offset_bottom = 529.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "You Died
+Press the Restart button 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level1Over" parent="." instance=ExtResource("13_ar8bl")]
 
 [connection signal="shoot" from="Player" to="BulletManager" method="_on_player_shoot"]
 [connection signal="hit_p" from="EnemySpawner" to="." method="_on_enemy_spawner_hit_p"]

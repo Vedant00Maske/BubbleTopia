@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://fks2o8iy0lcc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psspd"]
+bg_color = Color(0.650128, 0.650128, 0.650128, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf83u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwcjp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1px7"]
+
+[node name="Level1Over" type="CanvasLayer"]
+
+[node name="Level1Restart" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -34.0
+offset_right = 126.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_pressed_color = Color(0.703808, 0.703808, 0.703808, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/disabled = SubResource("StyleBoxFlat_psspd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pf83u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kwcjp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1px7")
+text = "Restart"
