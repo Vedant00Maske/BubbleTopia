@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://dksn34nblnk"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_b8k3t"]
+[ext_resource type="Texture2D" uid="uid://bvik2o6wltsb0" path="res://assets/items/Background_image_main.png" id="2_63rod"]
+[ext_resource type="FontFile" uid="uid://sn0wiu6h51t2" path="res://assets/font/Early GameBoy.ttf" id="3_1cwjk"]
+
+[sub_resource type="Theme" id="Theme_5sn3y"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_5sn3y")
+script = ExtResource("1_b8k3t")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 1916.0
+offset_bottom = 1075.0
+texture = ExtResource("2_63rod")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 266.0
+offset_right = 1363.0
+offset_bottom = 376.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1cwjk")
+theme_override_font_sizes/font_size = 80
+text = "GAME TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 638.0
+offset_right = 1416.0
+offset_bottom = 878.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_1cwjk")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_1cwjk")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
