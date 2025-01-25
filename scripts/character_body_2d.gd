@@ -4,6 +4,8 @@ extends CharacterBody2D
 
 var speed: int 
 var input_dir: Vector2
+var screen_size: Vector2
+
 
 func _ready() -> void:
 	speed = 200
@@ -11,6 +13,7 @@ func _ready() -> void:
 func get_input():
 	input_dir = Input.get_vector("left","right","up","down")
 	velocity = speed * input_dir
+	screen_size = get_viewport_rect().size
 	
 	# Handle animations based on movement direction
 	if input_dir == Vector2.ZERO:
@@ -23,3 +26,4 @@ func get_input():
 func _physics_process(delta: float) -> void:
 	get_input()
 	move_and_slide()
+	position = position.clamp(Vector2.ZERO,screen_size)

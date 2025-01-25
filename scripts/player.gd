@@ -53,7 +53,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame = 1
-
+func player():
+	pass
 func _on_shoot_timer_timeout() -> void:
 	can_shoot = true
 

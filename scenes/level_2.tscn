@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://lvyvpoqt2f2a"]
+[gd_scene load_steps=27 format=3 uid="uid://lvyvpoqt2f2a"]
 
 [ext_resource type="Texture2D" uid="uid://q2t0i05b0cwo" path="res://tf_atlantis_tiles.png" id="1_bhek2"]
 [ext_resource type="Script" path="res://scenes/level_2.gd" id="1_c3v8a"]
@@ -904,6 +904,9 @@ _data = {
 "slidesideways": SubResource("Animation_6lewg")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bprue"]
+size = Vector2(31.5, 2.87592)
+
 [node name="level2" type="Node2D"]
 scale = Vector2(4, 2.667)
 script = ExtResource("1_c3v8a")
@@ -936,7 +939,7 @@ layer_0/tile_data = PackedInt32Array(29, 1, 0, 0, 1, 268435456, 1, 3, 0, 2, 3, 0
 position = Vector2(22, 43.8695)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_8ni6r")]
-position = Vector2(22.75, 367.454)
+position = Vector2(44.75, 357.705)
 scale = Vector2(0.2, 0.2)
 
 [node name="BubbleWall1" parent="." instance=ExtResource("2_rp45u")]
@@ -1601,5 +1604,11 @@ shape = SubResource("RectangleShape2D_7x3uh")
 libraries = {
 "": SubResource("AnimationLibrary_uosxd")
 }
+
+[node name="Level2EntranceBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level2EntranceBorder"]
+position = Vector2(32.75, 381.764)
+shape = SubResource("RectangleShape2D_bprue")
 
 [connection signal="body_entered" from="switch" to="." method="_on_switch_body_entered"]
