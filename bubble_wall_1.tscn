@@ -4,18 +4,19 @@
 [ext_resource type="Script" path="res://bubble_wall_1.gd" id="1_ms1pp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4fgsf"]
+radius = 12.2726
 
 [node name="BubbleWall1" type="Area2D"]
+scale = Vector2(0.9, 0.9)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_ms1pp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.026, 0.026)
+scale = Vector2(0.026, 0.03)
 texture = ExtResource("1_momdf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_4fgsf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
