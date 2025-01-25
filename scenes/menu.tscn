@@ -1,10 +1,26 @@
 [gd_scene load_steps=5 format=3 uid="uid://dksn34nblnk"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_b8k3t"]
 [ext_resource type="Texture2D" uid="uid://bvik2o6wltsb0" path="res://assets/items/Background_image_main.png" id="2_63rod"]
 [ext_resource type="FontFile" uid="uid://sn0wiu6h51t2" path="res://assets/font/Early GameBoy.ttf" id="3_1cwjk"]
 
 [sub_resource type="Theme" id="Theme_5sn3y"]
+
+[sub_resource type="GDScript" id="GDScript_2p2uc"]
+script/source = "
+extends Control
+
+
+
+
+
+
+func _on_play_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/main.tscn\")
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -12,7 +28,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = SubResource("Theme_5sn3y")
-script = ExtResource("1_b8k3t")
+script = SubResource("GDScript_2p2uc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

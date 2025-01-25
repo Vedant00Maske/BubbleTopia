@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://67sveps5mf7b"]
+[gd_scene load_steps=3 format=3 uid="uid://cnoqds74dgu0j"]
 
-[ext_resource type="Script" path="res://option.gd" id="1_de4wi"]
 [ext_resource type="Texture2D" uid="uid://bvik2o6wltsb0" path="res://assets/items/Background_image_main.png" id="2_x5527"]
+
+[sub_resource type="GDScript" id="GDScript_ucmmf"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+
+
+
+func _on_volume_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://menu.tscn\")
+"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -14,7 +29,7 @@ offset_right = 240.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_de4wi")
+script = SubResource("GDScript_ucmmf")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
