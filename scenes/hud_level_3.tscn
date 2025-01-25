@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://cowo2ue72lfwq"]
+
+[ext_resource type="Texture2D" uid="uid://bw4ajnmu7y3b4" path="res://assets/items/heart.png" id="1_rvcn7"]
+[ext_resource type="Texture2D" uid="uid://dwdn6ujpddnec" path="res://assets/boss/Mecha-stone Golem 0.1/PNG sheet/Screenshot 2025-01-26 044026.png" id="2_e7p4e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7qcg"]
+border_width_top = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="HUD_Level1" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x7qcg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(88, 30)
+scale = Vector2(4, 4)
+texture = ExtResource("1_rvcn7")
+
+[node name="LivesLabel" type="Label" parent="."]
+texture_filter = 1
+offset_left = 120.0
+offset_top = -3.0
+offset_right = 185.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 45
+text = "X 10"
+
+[node name="LevelLabel" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.5
+offset_right = 88.5
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+text = "LEVEL: THE FINAL BOSS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1644, 29)
+scale = Vector2(0.6, 0.6)
+
+[node name="EnemiesLabel" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -243.0
+offset_top = -3.0
+offset_right = -152.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 45
+text = "X 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AlienYellowDuck" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1651, 32)
+scale = Vector2(0.229039, 0.221311)
+texture = ExtResource("2_e7p4e")

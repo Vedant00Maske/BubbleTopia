@@ -61,6 +61,11 @@ e={
 2d_physics/layer_4="Bullets"
 2d_physics/layer_5="Items"
 2d_physics/layer_6="Props"
+2d_physics/layer_7="Golem"
+2d_physics/layer_8="Golem_PlayerDetection"
+2d_physics/layer_9="missile"
+2d_physics/layer_10="GolemHitPlayer"
+2d_physics/layer_11="Lvl3Bullet"
 
 [rendering]
 

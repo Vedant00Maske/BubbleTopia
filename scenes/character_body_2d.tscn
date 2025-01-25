@@ -122,8 +122,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_udqku"]
-radius = 26.0192
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qpap2"]
+radius = 18.0
+height = 73.0
 
 [node name="PlayerLevel2" type="CharacterBody2D"]
 texture_filter = 1
@@ -135,7 +136,8 @@ script = ExtResource("1_stgef")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1typi")
 animation = &"down"
+autoplay = "up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.333333, 0.333333)
-shape = SubResource("CircleShape2D_udqku")
+position = Vector2(10, -5.5)
+shape = SubResource("CapsuleShape2D_qpap2")
