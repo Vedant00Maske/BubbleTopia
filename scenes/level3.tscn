@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b2qqku3rfd4im" path="res://water_down.png" id="5_cvr0d"]
 [ext_resource type="PackedScene" uid="uid://bhmsifqthkvtt" path="res://scenes/player3.tscn" id="7_f83o1"]
 [ext_resource type="PackedScene" uid="uid://rr3wv0faqipj" path="res://scenes/golem_boss.tscn" id="8_relvs"]
-[ext_resource type="PackedScene" uid="uid://cowo2ue72lfwq" path="res://scenes/hud_level_3.tscn" id="10_h570c"]
+[ext_resource type="PackedScene" uid="uid://bgkeq0uc6qnuw" path="res://scenes/hud_level_3.tscn" id="10_h570c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_be05y"]
 texture = ExtResource("1_6cn2x")
@@ -861,7 +861,7 @@ position = Vector2(1164, 482)
 [node name="Player3" parent="." instance=ExtResource("7_f83o1")]
 position = Vector2(73, 573)
 
-[node name="HUD_Level1" parent="." instance=ExtResource("10_h570c")]
+[node name="HUD_Level_3" parent="." instance=ExtResource("10_h570c")]
 offset = Vector2(0, 1024)
 transform = Transform2D(1, 0, 0, 1, 0, 1024)
 

@@ -28,12 +28,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iq6px"]
-radius = 33.0
+radius = 29.0
 height = 90.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_htom8"]
-radius = 33.0
-height = 88.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6mncs"]
+radius = 43.0
+height = 112.0
 
 [node name="Enemy3" type="CharacterBody2D"]
 collision_layer = 4
@@ -47,7 +47,7 @@ sprite_frames = SubResource("SpriteFrames_cy4ny")
 animation = &"swim"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1)
+position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_iq6px")
 
 [node name="EntranceTimer" type="Timer" parent="."]
@@ -59,7 +59,8 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CapsuleShape2D_htom8")
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_6mncs")
 
 [connection signal="timeout" from="EntranceTimer" to="." method="_on_entrance_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

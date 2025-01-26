@@ -18,8 +18,8 @@ func _ready() -> void:
 		Dialogic.start("level1_desc")
 		Dialogic.timeline_ended.connect(_on_dialog_ended)
 	level = 1
-	lives = 5
-	max_enemies = 5
+	lives = 3
+	max_enemies = 50
 	current_enemies = max_enemies
 	update_hud()
 	connect("enemy_killed", Callable(self, "_on_enemy_killed"))

@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://yk6vjg4l2gnl" path="res://assets/boss/Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_s1qq3"]
 [ext_resource type="Script" path="res://scripts/finite_state_machine.gd" id="3_6lb58"]
 [ext_resource type="Script" path="res://scripts/idle.gd" id="4_ba5vp"]
-[ext_resource type="Script" path="res://scripts/state.gd" id="4_lhbyu"]
 [ext_resource type="Script" path="res://scripts/follow.gd" id="6_tamta"]
 [ext_resource type="Script" path="res://scripts/melee_attack.gd" id="7_h7ayo"]
 [ext_resource type="Script" path="res://scripts/homing_missile.gd" id="8_rvmtu"]
@@ -13,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/laser_beam.gd" id="10_b80ns"]
 [ext_resource type="Script" path="res://scripts/armor_buff.gd" id="11_2cd1a"]
 [ext_resource type="Script" path="res://scripts/dash.gd" id="11_6h8v3"]
+[ext_resource type="Script" path="res://scripts/death.gd" id="13_yj5b3"]
 
 [sub_resource type="Animation" id="Animation_la6wo"]
 length = 0.001
@@ -407,7 +407,52 @@ script = ExtResource("11_2cd1a")
 script = ExtResource("11_6h8v3")
 
 [node name="Death" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("4_lhbyu")
+script = ExtResource("13_yj5b3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -27.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 100.0
+
+[node name="Label" type="Label" parent="CanvasLayer/ProgressBar"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = -20.0
+offset_right = 54.0
+offset_bottom = 3.0
+text = "Golem"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -24.5
+offset_right = 102.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Boss Slained 
+You've proved your worth "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/Idle" method="_on_player_detection_body_entered"]
 [connection signal="body_entered" from="PlayerHit" to="." method="_on_player_hit_body_entered"]

@@ -15,7 +15,7 @@ func transition():
 	if distance < 230:
 		get_parent().change_state("MeleeAttack")
 	elif distance > 480 and distance < 750:
-		var chance = randi() % 1
+		var chance = randi() % 2
 		match chance:
 			0:
 				get_parent().change_state("HomingMissile")
