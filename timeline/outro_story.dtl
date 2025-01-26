@@ -1,3 +1,4 @@
+[music path="res://audios/water-flow-237045 (1).mp3" fade="0.0" volume="-10.0"]
 join King (King) center [animation="Slide In Up"]
 join Mermaid (MermaidOutro) leftmost [animation="Slide In Right"]
 join Player (PlayerOutro) rightmost [animation="Slide In Left"]

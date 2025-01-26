@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://g5qk167sntpw"]
+
+[ext_resource type="Script" path="res://scripts/audio.gd" id="1_ad2ea"]
+[ext_resource type="AudioStream" uid="uid://cto0qwmv7ve32" path="res://assets/Audio/sb_indreams(chosic.com).mp3" id="2_qd6bi"]
+[ext_resource type="AudioStream" uid="uid://bg40yl80kqv48" path="res://assets/Audio/bubblepop-01-255624.mp3" id="3_1u37k"]
+[ext_resource type="AudioStream" uid="uid://b7hs5bok12i0c" path="res://assets/Audio/light-switch-156813.mp3" id="4_1w8c2"]
+[ext_resource type="AudioStream" uid="uid://dicqohycjfo0s" path="res://assets/Audio/death.mp3" id="5_0l2ce"]
+[ext_resource type="AudioStream" uid="uid://dabim56cxqmt6" path="res://assets/Audio/Door.mp3" id="6_dvr6s"]
+[ext_resource type="AudioStream" uid="uid://b4e6adxfv8r6y" path="res://assets/Audio/GolemDead.mp3" id="7_qjgu6"]
+[ext_resource type="AudioStream" uid="uid://hbtid0xpnat6" path="res://assets/Audio/laser.mp3" id="8_0jfnr"]
+
+[node name="Audio" type="Node2D"]
+script = ExtResource("1_ad2ea")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qd6bi")
+volume_db = -25.0
+
+[node name="Bubble" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1u37k")
+volume_db = 3.0
+pitch_scale = 1.25
+
+[node name="DoorSwitch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1w8c2")
+volume_db = 5.0
+pitch_scale = 1.5
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0l2ce")
+volume_db = 3.0
+
+[node name="Door" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_dvr6s")
+volume_db = 10.0
+
+[node name="GolemDead" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qjgu6")
+volume_db = 5.0
+
+[node name="Laser" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0jfnr")
+volume_db = 3.0

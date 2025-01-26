@@ -8,6 +8,7 @@ signal hit_l
 func enter():
 	super.enter()
 	await play_animation("laser_cast")
+	Audio.play_laser()
 	await play_animation("laser")
 	hit_l.emit()
 	can_transition = true

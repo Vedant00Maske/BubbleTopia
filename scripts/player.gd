@@ -32,6 +32,7 @@ func get_input():
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_shoot:
 		var dir = get_global_mouse_position() - position
 		shoot.emit(position,dir)
+		Audio.play_bubble()
 		can_shoot = false
 		$ShootTimer.start()
 	

@@ -420,8 +420,7 @@ offset_bottom = -12.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/fill = SubResource("StyleBoxFlat_ryn2p")
-max_value = 1000.0
-value = 1000.0
+value = 100.0
 
 [connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/Idle" method="_on_player_detection_body_entered"]
 [connection signal="body_entered" from="PlayerHit" to="." method="_on_player_hit_body_entered"]

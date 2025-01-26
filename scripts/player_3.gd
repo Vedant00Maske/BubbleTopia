@@ -12,7 +12,7 @@ var can_shoot: bool = true
 var input_dir: Vector2 = Vector2.ZERO
 
 # Lives system
-var max_lives = 15
+var max_lives = 20
 var current_lives: int
 
 # Flash effect variables
@@ -76,12 +76,14 @@ func _on_shoot_timer_again_timeout() -> void:
 func shoot_input() -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_shoot:
 		shoot()
+		Audio.play_bubble()
 		can_shoot = false
 		shoot_timer.start()
 
 func take_damage():
 	current_lives -= 1
 	emit_signal("lives_changed", current_lives)
+	Audio.play_hit()
 	flash_damage()
 	
 

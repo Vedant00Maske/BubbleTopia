@@ -18,8 +18,8 @@ func _ready() -> void:
 		Dialogic.start("level1_desc")
 		Dialogic.timeline_ended.connect(_on_dialog_ended)
 	level = 1
-	lives = 3
-	max_enemies = 5
+	lives = 5
+	max_enemies = 35
 	current_enemies = max_enemies
 	update_hud()
 	connect("enemy_killed", Callable(self, "_on_enemy_killed"))
@@ -39,7 +39,9 @@ func _on_enemy_killed() -> void:
 
 func _on_enemy_spawner_hit_p() -> void:
 	lives -= 1
+	lives = max(0, lives)  # Ensure lives never go below 0
 	$HUD_Level1/LivesLabel.text = "X " + str(lives)
+	Audio.play_hit()
 	emit_signal("player_damaged")
 
 	if lives <= 0:
