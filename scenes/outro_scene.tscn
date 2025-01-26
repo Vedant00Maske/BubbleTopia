@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://di48mbmoliv7q"]
+
+[ext_resource type="Texture2D" uid="uid://dulihnvb7iq04" path="res://characters/Outro_background.png" id="1_qb8c6"]
+[ext_resource type="Script" path="res://scenes/outro_scene.gd" id="1_wc47v"]
+
+[node name="OutroScene" type="Node2D"]
+script = ExtResource("1_wc47v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 542)
+scale = Vector2(0.385764, 0.341975)
+texture = ExtResource("1_qb8c6")

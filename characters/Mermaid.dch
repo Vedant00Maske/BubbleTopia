@@ -25,6 +25,24 @@
 "offset": Vector2(-140, -200),
 "scale": 0.3,
 "scene": ""
+},
+"MermaidFinal": {
+"export_overrides": {
+"image": "\"res://characters/Mermaid.png\""
+},
+"mirror": false,
+"offset": Vector2(-100, -200),
+"scale": 0.3,
+"scene": ""
+},
+"MermaidOutro": {
+"export_overrides": {
+"image": "\"res://characters/Mermaid.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -200),
+"scale": 0.3,
+"scene": ""
 }
 },
 "scale": 1.0

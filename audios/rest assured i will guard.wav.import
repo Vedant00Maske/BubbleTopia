@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://svpq1gwdgdaw"
+path="res://.godot/imported/rest assured i will guard.wav-c48c8d26b0e9582f827222a91a7ef33a.sample"
+
+[deps]
+
+source_file="res://audios/rest assured i will guard.wav"
+dest_files=["res://.godot/imported/rest assured i will guard.wav-c48c8d26b0e9582f827222a91a7ef33a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

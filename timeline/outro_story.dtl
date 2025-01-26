@@ -1,0 +1,29 @@
+join King (King) center [animation="Slide In Up"]
+join Mermaid (MermaidOutro) leftmost [animation="Slide In Right"]
+join Player (PlayerOutro) rightmost [animation="Slide In Left"]
+[voice path="res://audios/you have done what no one else has ever did.wav" volume="0.0"]
+King (KingHappy): You have done what no one else has ever dared to achieve. You conquered the might of my Bubble Army, proving your strength.
+[voice path="res://audios/you solved the maze of bubbles.wav" volume="0.0"]
+King (KingHappy): You solved the Maze of Bubbles, showing your intelligence. And you defeated the formidable Guardian of Bubble Kingdom, displaying unparalleled bravery. Truly, you are a champion worthy of the Bubble Kingdom—and my daughter’s heart.
+[voice path="res://audios/ithank you i would face the oceans of.wav" volume="0.0"]
+Player: Thank you, Your Majesty. I would face an ocean of challenges a thousand times over for her. She is my guiding star in these deep waters.
+[voice path="res://audios/i expect you to cherish you and.wav" volume="0.0"]
+King (KingHappy): I expect you to cherish and protect her. The Bubble Kingdom is now as much your responsibility as it is mine.
+[voice path="res://audios/but if you fail.wav" volume="0.0"]
+King (KingHappy): But if you fail… let’s just say the Bubble Golem has a few siblings!
+[voice path="res://audios/rest assured i will guard.wav" volume="0.0"]
+Player: Rest assured, Your Majesty, I will guard her like the rarest pearl in the ocean. Nothing will harm her, I swear it.
+[voice path="res://audios/enough with th eformalities.wav" volume="0.0"]
+Mermaid: Enough with the formalities! We’ve earned our happily-ever-after!
+[voice path="res://audios/verry well as the power vested in me.wav" volume="0.0"]
+King (KingHappy): Very well, by the power vested in me as the ruler of the Bubble Kingdom, I now pronounce you… a happily wedded couple! May your love shine brighter than the moonlit tides.
+leave King [animation="Slide Out Down"]
+update Player (PlayerFinal) center [animation="Shake Y" move_time="1.0"]
+update Mermaid (MermaidFinal) center [animation="Shake Y" move_time="1.0"]
+[voice path="res://audios/thank you your majesty.wav" volume="0.0"]
+Player: Thank you, Your Majesty!
+[voice path="res://audios/Thank you Father.wav" volume="0.0"]
+Mermaid: Thank you Father!
+[voice path="res://audios/as the current carried.wav" volume="0.0"]
+As the currents carried their story to every corner of the seas, the Bubble Kingdom celebrated the union of two hearts destined to be together. And while new challenges may rise like tides, one thing is certain\: true love always finds a way.
+[signal arg="end_dialogue"]

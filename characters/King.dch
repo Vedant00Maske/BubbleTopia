@@ -23,7 +23,16 @@
 },
 "mirror": false,
 "offset": Vector2(0, -200),
-"scale": 0.3,
+"scale": 0.35,
+"scene": ""
+},
+"KingHappy": {
+"export_overrides": {
+"image": "\"res://characters/KingHappy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -200),
+"scale": 0.35,
 "scene": ""
 }
 },

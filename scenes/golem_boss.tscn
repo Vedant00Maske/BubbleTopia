@@ -359,16 +359,6 @@ libraries = {
 }
 autoplay = "idle"
 
-[node name="debug" type="Label" parent="."]
-offset_left = -15.0
-offset_top = -46.0
-offset_right = 22.0
-offset_bottom = -30.0
-theme_override_font_sizes/font_size = 11
-text = "debug"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_by5jg")
 

@@ -25,6 +25,24 @@
 "offset": Vector2(120, -200),
 "scale": 0.35,
 "scene": ""
+},
+"PlayerFinal": {
+"export_overrides": {
+"image": "\"res://characters/Player.png\""
+},
+"mirror": false,
+"offset": Vector2(120, -200),
+"scale": 0.35,
+"scene": ""
+},
+"PlayerOutro": {
+"export_overrides": {
+"image": "\"res://characters/Player.png\""
+},
+"mirror": false,
+"offset": Vector2(-20, -200),
+"scale": 0.35,
+"scene": ""
 }
 },
 "scale": 1.0

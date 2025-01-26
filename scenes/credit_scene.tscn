@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmfg17wxc4txn"]
+
+[ext_resource type="Texture2D" uid="uid://bp04s8bgkwli3" path="res://assets/CreditScenefinal.jpg" id="1_7lhaw"]
+
+[node name="CreditScene" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(962, 544)
+scale = Vector2(1.49844, 1.5)
+texture = ExtResource("1_7lhaw")
