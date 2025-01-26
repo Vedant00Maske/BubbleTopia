@@ -123,8 +123,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qpap2"]
-radius = 18.0
-height = 73.0
+radius = 14.0
+height = 67.0
 
 [node name="PlayerLevel2" type="CharacterBody2D"]
 texture_filter = 1

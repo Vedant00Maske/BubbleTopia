@@ -12,7 +12,7 @@ var can_shoot: bool = true
 var input_dir: Vector2 = Vector2.ZERO
 
 # Lives system
-var max_lives = 3
+var max_lives = 15
 var current_lives: int
 
 # Flash effect variables

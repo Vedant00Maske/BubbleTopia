@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dqmwhcdu63eh0"]
+[gd_scene load_steps=22 format=3 uid="uid://dqmwhcdu63eh0"]
 
 [ext_resource type="Texture2D" uid="uid://q2t0i05b0cwo" path="res://tf_atlantis_tiles.png" id="1_6cn2x"]
 [ext_resource type="Script" path="res://scripts/level_3.gd" id="1_66tn3"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bhmsifqthkvtt" path="res://scenes/player3.tscn" id="7_f83o1"]
 [ext_resource type="PackedScene" uid="uid://rr3wv0faqipj" path="res://scenes/golem_boss.tscn" id="8_relvs"]
 [ext_resource type="PackedScene" uid="uid://bgkeq0uc6qnuw" path="res://scenes/hud_level_3.tscn" id="10_h570c"]
+[ext_resource type="Texture2D" uid="uid://eksu1iconk4m" path="res://assets/player/mer_8_chars3.png" id="11_4wlu7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_be05y"]
 texture = ExtResource("1_6cn2x")
@@ -191,7 +192,9 @@ texture = ExtResource("1_6cn2x")
 25:7/0 = 0
 26:7/0 = 0
 27:7/0 = 0
+27:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.375, 0.25, 8, -8, 8, 8, -8, 8)
 28:7/0 = 0
+28:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -0.25, -1.375, 8, 8, -8, 8)
 30:7/0 = 0
 32:7/0 = 0
 1:8/0 = 0
@@ -217,7 +220,9 @@ texture = ExtResource("1_6cn2x")
 25:8/0 = 0
 26:8/0 = 0
 27:8/0 = 0
+27:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.375, -6.5, 5.875, -5.75, 6.875, 6.125, -3.875, 7)
 28:8/0 = 0
+28:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 6.125, -8, 1.625, 6.375, -8, 8)
 30:8/0 = 0
 32:8/0 = 0
 1:9/0 = 0
@@ -245,7 +250,9 @@ texture = ExtResource("1_6cn2x")
 25:9/0 = 0
 26:9/0 = 0
 27:9/0 = 0
+27:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.375, -8, 8, -8, 8, 8, -8, 8, -5.25, 8)
 28:9/0 = 0
+28:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.625, -8, 5, 8, -8, 8)
 1:10/0 = 0
 2:10/0 = 0
 3:10/0 = 0
@@ -862,8 +869,14 @@ position = Vector2(1164, 482)
 position = Vector2(73, 573)
 
 [node name="HUD_Level_3" parent="." instance=ExtResource("10_h570c")]
+visible = false
 offset = Vector2(0, 1024)
 transform = Transform2D(1, 0, 0, 1, 0, 1024)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(158, 80)
+texture = ExtResource("11_4wlu7")
 
 [connection signal="hit_laser" from="GolemBoss" to="." method="_on_golem_boss_hit_laser"]
 [connection signal="hit_player3" from="GolemBoss" to="." method="_on_golem_boss_hit_player_3"]

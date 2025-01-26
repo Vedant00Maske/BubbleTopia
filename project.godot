@@ -27,8 +27,10 @@ directories/dch_directory={
 "Player": "res://characters/Player.dch"
 }
 directories/dtl_directory={
+"door_switch": "res://timeline/door_switch.dtl",
 "intro_story": "res://timeline/intro_story.dtl",
-"level1_desc": "res://timeline/level1_desc.dtl"
+"level1_desc": "res://timeline/level1_desc.dtl",
+"level_1_over": "res://timeline/level_1_over.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

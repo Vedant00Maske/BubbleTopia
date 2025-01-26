@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgkeq0uc6qnuw"]
+[gd_scene load_steps=7 format=3 uid="uid://bgkeq0uc6qnuw"]
 
 [ext_resource type="Script" path="res://scripts/hud_level_3.gd" id="1_egqee"]
 [ext_resource type="Texture2D" uid="uid://bw4ajnmu7y3b4" path="res://assets/items/heart.png" id="1_rvcn7"]
-[ext_resource type="Texture2D" uid="uid://cqcb0f4pbcfh1" path="res://assets/enemy/yellow_enemy/alienYellow_duck.png" id="2_4axyd"]
+[ext_resource type="Texture2D" uid="uid://bvik2o6wltsb0" path="res://assets/items/Background_image_main.png" id="2_niiqj"]
+[ext_resource type="FontFile" uid="uid://sn0wiu6h51t2" path="res://assets/font/Early GameBoy.ttf" id="3_pb5k0"]
+[ext_resource type="Texture2D" uid="uid://dwdn6ujpddnec" path="res://assets/boss/Mecha-stone Golem 0.1/PNG sheet/Screenshot 2025-01-26 044026.png" id="5_1xwno"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrmlc"]
 bg_color = Color(1.44392e-06, 0.578832, 0.583862, 1)
@@ -12,21 +14,43 @@ border_color = Color(0, 0, 0, 1)
 [node name="HUD_Level_3" type="CanvasLayer"]
 script = ExtResource("1_egqee")
 
-[node name="Button" type="Button" parent="."]
-z_index = 2
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -1164.0
+offset_right = 1906.0
+offset_bottom = 4.0
+texture = ExtResource("2_niiqj")
+
+[node name="Button" type="Button" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -43.0
-offset_top = -1456.0
-offset_right = 174.0
-offset_bottom = -1379.0
+offset_left = -240.0
+offset_top = 54.0
+offset_right = -120.0
+offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "RESTART"
+scale = Vector2(4, 4)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_pb5k0")
+text = "RESTART
+"
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 326.0
+offset_right = 2016.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pb5k0")
+theme_override_font_sizes/font_size = 100
+text = "YOU DIED !!"
 
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1
@@ -51,62 +75,34 @@ text = "X 3"
 
 [node name="LevelLabel" type="Label" parent="."]
 texture_filter = 1
-anchors_preset = -1
-anchor_left = 0.26
-anchor_top = 0.025
-anchor_right = 0.26
-anchor_bottom = 0.025
-offset_left = -258.2
-offset_top = -32.0
-offset_right = 259.8
-offset_bottom = 31.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -259.0
+offset_right = 259.0
+offset_bottom = 63.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 45
-text = "LEVEL 1: BUBBLE BATTLE "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Description" type="Label" parent="."]
-texture_filter = 1
-anchors_preset = -1
-anchor_left = 0.26
-anchor_top = 0.025
-anchor_right = 0.26
-anchor_bottom = 0.025
-offset_left = 406.8
-offset_top = -32.0
-offset_right = 1117.8
-offset_bottom = 31.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 45
-text = "Press left mouse button to shoot"
+text = "THE FINAL SHOWDOWN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1644, 29)
-scale = Vector2(0.6, 0.6)
+position = Vector2(1767.4, 31.66)
+scale = Vector2(0.238834, 0.226803)
+texture = ExtResource("5_1xwno")
 
 [node name="EnemiesLabel" type="Label" parent="."]
 texture_filter = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -118.0
-offset_top = -6.0
-offset_right = -27.0
-offset_bottom = 57.0
+offset_left = -125.0
+offset_right = -34.0
+offset_bottom = 63.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 45
-text = "X 10"
+text = "X 1"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AlienYellowDuck" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(1757, 27)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_4axyd")
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

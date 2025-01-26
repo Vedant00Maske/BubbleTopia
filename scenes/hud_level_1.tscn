@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6vmamel3t6hb"]
+[gd_scene load_steps=6 format=3 uid="uid://c6vmamel3t6hb"]
 
 [ext_resource type="Texture2D" uid="uid://bw4ajnmu7y3b4" path="res://assets/items/heart.png" id="1_bjoto"]
 [ext_resource type="Texture2D" uid="uid://cqcb0f4pbcfh1" path="res://assets/enemy/yellow_enemy/alienYellow_duck.png" id="2_wt17h"]
+[ext_resource type="Texture2D" uid="uid://2et2yularl55" path="res://assets/enemy/blue_enemy/alienBlue_duck.png" id="3_d00wj"]
+[ext_resource type="Texture2D" uid="uid://b0ths7f3kpafo" path="res://assets/enemy/pink_enemy/alienPink_duck.png" id="4_hwxkt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7qcg"]
-bg_color = Color(1.44392e-06, 0.578832, 0.583862, 1)
+bg_color = Color(9.62615e-08, 0.425437, 0.525452, 1)
 border_width_top = 2
 border_color = Color(0, 0, 0, 1)
 
@@ -33,18 +35,15 @@ text = "X 3"
 
 [node name="LevelLabel" type="Label" parent="."]
 texture_filter = 1
-anchors_preset = -1
-anchor_left = 0.26
-anchor_top = 0.025
-anchor_right = 0.26
-anchor_bottom = 0.025
-offset_left = -258.2
-offset_top = -32.0
-offset_right = 259.8
-offset_bottom = 31.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -259.0
+offset_right = 259.0
+offset_bottom = 63.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 45
-text = "LEVEL 1: BUBBLE BATTLE "
+text = " BUBBLE BATTLE "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -61,7 +60,6 @@ offset_right = 1117.8
 offset_bottom = 31.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 45
-text = "Press left mouse button to shoot"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -75,10 +73,10 @@ texture_filter = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -118.0
-offset_top = -6.0
-offset_right = -27.0
-offset_bottom = 57.0
+offset_left = -130.0
+offset_top = -2.0
+offset_right = -39.0
+offset_bottom = 61.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 45
 text = "X 10"
@@ -87,6 +85,16 @@ vertical_alignment = 1
 
 [node name="AlienYellowDuck" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1757, 27)
+position = Vector2(1754, 28)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_wt17h")
+
+[node name="AlienBlueDuck" type="Sprite2D" parent="."]
+position = Vector2(1637, 27)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_d00wj")
+
+[node name="AlienPinkDuck" type="Sprite2D" parent="."]
+position = Vector2(1695, 28)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_hwxkt")

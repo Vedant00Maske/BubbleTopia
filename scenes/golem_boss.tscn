@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://rr3wv0faqipj"]
+[gd_scene load_steps=29 format=3 uid="uid://rr3wv0faqipj"]
 
 [ext_resource type="Texture2D" uid="uid://n4orro4j65ir" path="res://assets/boss/Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_lfbua"]
 [ext_resource type="Script" path="res://scripts/golem_boss.gd" id="1_n03dd"]
@@ -328,6 +328,9 @@ radius = 161.066
 [sub_resource type="CircleShape2D" id="CircleShape2D_ud13o"]
 radius = 25.8527
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryn2p"]
+bg_color = Color(1, 0, 0, 1)
+
 [node name="GolemBoss" type="CharacterBody2D"]
 scale = Vector2(6, 6)
 collision_layer = 576
@@ -415,45 +418,20 @@ script = ExtResource("13_yj5b3")
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
 texture_filter = 1
 custom_minimum_size = Vector2(200, 0)
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = -27.0
-offset_right = 2.0
-grow_horizontal = 2
+offset_left = -463.0
+offset_top = -39.0
+offset_right = -202.0
+offset_bottom = -12.0
+grow_horizontal = 0
 grow_vertical = 0
-value = 100.0
-
-[node name="Label" type="Label" parent="CanvasLayer/ProgressBar"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 3.0
-offset_top = -20.0
-offset_right = 54.0
-offset_bottom = 3.0
-text = "Golem"
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -102.0
-offset_top = -24.5
-offset_right = 102.0
-offset_bottom = 24.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "Boss Slained 
-You've proved your worth "
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_ryn2p")
+max_value = 1000.0
+value = 1000.0
 
 [connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/Idle" method="_on_player_detection_body_entered"]
 [connection signal="body_entered" from="PlayerHit" to="." method="_on_player_hit_body_entered"]

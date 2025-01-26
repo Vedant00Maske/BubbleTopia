@@ -911,19 +911,6 @@ collision_mask = 3
 position = Vector2(1029, 900)
 shape = SubResource("CircleShape2D_ikjkt")
 
-[node name="Level1_To_Level2_Text" type="Label" parent="."]
-visible = false
-offset_left = 511.0
-offset_top = 579.0
-offset_right = 1346.0
-offset_bottom = 720.0
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 50
-text = "Go near the cave and press Enter
-   ↓"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="PlayerDead" type="Label" parent="."]
 visible = false
 offset_left = 405.0
