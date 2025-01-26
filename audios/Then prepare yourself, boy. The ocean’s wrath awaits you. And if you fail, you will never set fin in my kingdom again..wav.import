@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://kd30la8d3udp"
+path="res://.godot/imported/Then prepare yourself, boy. The ocean’s wrath awaits you. And if you fail, you will never set fin in my kingdom again..wav-fc188d8429d1a0c324c628c0e097defb.sample"
+
+[deps]
+
+source_file="res://audios/Then prepare yourself, boy. The ocean’s wrath awaits you. And if you fail, you will never set fin in my kingdom again..wav"
+dest_files=["res://.godot/imported/Then prepare yourself, boy. The ocean’s wrath awaits you. And if you fail, you will never set fin in my kingdom again..wav-fc188d8429d1a0c324c628c0e097defb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

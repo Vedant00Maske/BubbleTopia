@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.772549, 0.305882, 0.027451, 1),
+"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+"default_portrait": "King",
+"description": "Bubble Kingdom King",
+"display_name": "King Neptune",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"King": {
+"export_overrides": {
+"image": "\"res://characters/King.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -200),
+"scale": 0.3,
+"scene": ""
+}
+},
+"scale": 1.0
+}

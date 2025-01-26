@@ -14,6 +14,9 @@ signal enemy_killed
 func _ready() -> void:
 	$Level1Over.get_node("Level1Restart").pressed.connect(new_game)
 	$Level1Over.hide()
+	if is_game_over == false :
+		Dialogic.start("level1_desc")
+		Dialogic.timeline_ended.connect(_on_dialog_ended)
 	level = 1
 	lives = 5
 	max_enemies = 5
@@ -74,3 +77,6 @@ func new_game() -> void:
 	
 	# Reload the current scene
 	get_tree().reload_current_scene()
+	
+func _on_dialog_ended():
+	pass

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgqrydcjkvllf"]
+
+[ext_resource type="Script" path="res://scripts/intro_scene.gd" id="1_rdmfg"]
+[ext_resource type="Texture2D" uid="uid://cadkw8xdos5d4" path="res://Background_image_main.png" id="1_rjikv"]
+
+[node name="IntroScene" type="Node2D"]
+script = ExtResource("1_rdmfg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(961, 534.5)
+scale = Vector2(3.08946, 2.30297)
+texture = ExtResource("1_rjikv")

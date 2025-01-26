@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.305882, 0.796078, 0.333333, 1),
+"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+"default_portrait": "Player",
+"description": "",
+"display_name": "Caspian",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"Player": {
+"export_overrides": {
+"image": "\"res://characters/Player.png\""
+},
+"mirror": false,
+"offset": Vector2(120, -200),
+"scale": 0.35,
+"scene": ""
+}
+},
+"scale": 1.0
+}

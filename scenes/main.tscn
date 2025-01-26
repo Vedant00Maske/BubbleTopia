@@ -919,7 +919,7 @@ offset_right = 1346.0
 offset_bottom = 720.0
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
-text = "Go near the cave and press E 
+text = "Go near the cave and press Enter
    ↓"
 horizontal_alignment = 1
 vertical_alignment = 1

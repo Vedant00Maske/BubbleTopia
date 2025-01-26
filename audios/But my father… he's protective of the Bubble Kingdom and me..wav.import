@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bsp2huter1gsc"
+path="res://.godot/imported/But my father… he's protective of the Bubble Kingdom and me..wav-60d62c90e2cc0271383a21153e98d2cf.sample"
+
+[deps]
+
+source_file="res://audios/But my father… he's protective of the Bubble Kingdom and me..wav"
+dest_files=["res://.godot/imported/But my father… he's protective of the Bubble Kingdom and me..wav-60d62c90e2cc0271383a21153e98d2cf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

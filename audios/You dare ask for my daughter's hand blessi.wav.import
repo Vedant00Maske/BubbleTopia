@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6aefinvfbn77"
+path="res://.godot/imported/You dare ask for my daughter's hand blessi.wav-f6565b4f9a1735dec458a5dad59ecede.sample"
+
+[deps]
+
+source_file="res://audios/You dare ask for my daughter's hand blessi.wav"
+dest_files=["res://.godot/imported/You dare ask for my daughter's hand blessi.wav-f6565b4f9a1735dec458a5dad59ecede.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

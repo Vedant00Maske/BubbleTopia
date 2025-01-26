@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://p7qcd0mgpbc3"
+path="res://.godot/imported/Be careful. The trials aren’t just dangerous—they’re meant to break you. But I believe in you. I always have..wav-c0b58f36d9538be5e9f7216f18a26109.sample"
+
+[deps]
+
+source_file="res://audios/Be careful. The trials aren’t just dangerous—they’re meant to break you. But I believe in you. I always have..wav"
+dest_files=["res://.godot/imported/Be careful. The trials aren’t just dangerous—they’re meant to break you. But I believe in you. I always have..wav-c0b58f36d9538be5e9f7216f18a26109.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

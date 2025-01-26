@@ -1,0 +1,23 @@
+[music path="res://audios/water-flow-237045 (1).mp3" fade="0.0" volume="-10.0"]
+[voice path="res://audios/premiseDialogue.wav" volume="0.0"]
+Deep in the heart of the Pacific Ocean, stands a majestic Bubble Kingdom. This enchanting kingdom is ruled by the powerful and protective King Neptune, who cherishes his daughter, Princess Marina, above all else.
+join Player center [animation="Slide In Right"]
+join Mermaid center [animation="Slide In Left"]
+[voice path="res://audios/Marina, you are the jewel of the ocean, the melody in every current..wav" volume="0.0"]
+Player: Marina, you are the jewel of the ocean, the melody in every current. I’ve loved you since the first time I saw you. I want to marry you and spend my life by your side.
+[voice path="res://audios/I feel the same way about you Caspian.wav" volume="0.0"]
+Mermaid: I feel the same way about you Caspian !
+[voice path="res://audios/But my father… he's protective of the Bubble Kingdom and me..wav" volume="0.0"]
+Mermaid: But my father… he's protective of the Bubble Kingdom and me.
+join King center [animation="Slide In Down"]
+update Mermaid left [animation="Heartbeat"]
+update Player right [animation="Heartbeat"]
+[voice path="res://audios/You dare ask for my daughter's hand blessi.wav" volume="0.0"]
+King (King): You dare ask for my daughter's hand? You are unworthy of her love ! If you wish to prove me wrong, then face the Trials of the Deep. Only by passing these impossible challenges will you earn my blessing—if you survive at all!
+[voice path="res://audios/I may not have a crown or riches, but my heart is true, !.wav" volume="0.0"]
+Player: I may not have a crown or riches, but my heart is true, and my love for Marina is unshakable. I’ll do whatever it takes to earn your blessing!
+[voice path="res://audios/Then prepare yourself, boy. The ocean’s wrath awaits you. And if you fail, you will never set fin in my kingdom again..wav" volume="0.0"]
+King: Then prepare yourself, boy. The ocean’s wrath awaits you. And if you fail, you will never set fin in my kingdom again.
+[voice path="res://audios/Be careful. The trials aren’t just dangerous—they’re meant to break you. But I believe in you. I always have..wav" volume="0.0"]
+Mermaid: Be careful. The trials aren’t just dangerous—they’re meant to break you. But I believe in you. I always have.
+[signal arg="end_dialogue"]

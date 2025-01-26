@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ccyo2vojbavgk"
+path="res://.godot/imported/I feel the same way about you Caspian.wav-6566cc83bf04c06986bfed3d15ecded1.sample"
+
+[deps]
+
+source_file="res://audios/I feel the same way about you Caspian.wav"
+dest_files=["res://.godot/imported/I feel the same way about you Caspian.wav-6566cc83bf04c06986bfed3d15ecded1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
