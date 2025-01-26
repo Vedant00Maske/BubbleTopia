@@ -4,8 +4,10 @@ extends CharacterBody2D
 @onready var sprite = $Sprite2D
 @onready var progress_bar = $CanvasLayer/ProgressBar
 @onready var melee_need = get_node("FiniteStateMachine/MeleeAttack")
+@onready var laser_need = get_node("FiniteStateMachine/LaserBeam")
 
 signal hit_player3
+signal hit_laser
 
 var direction: Vector2
 var DEF = 0
@@ -25,6 +27,7 @@ var health = 100:
 func _ready():
 	# Connect melee attack
 	melee_need.hit_p.connect(hit)
+	laser_need.hit_l.connect(hit_l)
 	set_physics_process(false)
 
 	# Find all bullets and connect their signals dynamically
@@ -49,3 +52,6 @@ func take_damage():
 
 func hit():
 	emit_signal("hit_player3")
+	
+func hit_l():
+	emit_signal("hit_laser")

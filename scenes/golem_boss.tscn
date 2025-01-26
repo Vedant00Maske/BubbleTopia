@@ -342,7 +342,7 @@ hframes = 10
 vframes = 10
 
 [node name="Pivot" type="Node2D" parent="."]
-position = Vector2(2, -17)
+position = Vector2(3.16667, -15.3333)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pivot"]
 texture_filter = 1
@@ -379,6 +379,7 @@ shape = SubResource("CircleShape2D_m65at")
 [node name="PlayerHit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHit"]
+position = Vector2(0.666667, 0.166667)
 shape = SubResource("CircleShape2D_ud13o")
 
 [node name="FiniteStateMachine" type="Node2D" parent="."]

@@ -12,6 +12,22 @@ border_color = Color(0, 0, 0, 1)
 [node name="HUD_Level_3" type="CanvasLayer"]
 script = ExtResource("1_egqee")
 
+[node name="Button" type="Button" parent="."]
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -1456.0
+offset_right = 174.0
+offset_bottom = -1379.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "RESTART"
+
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1
 offset_right = 1920.0
@@ -92,3 +108,5 @@ texture_filter = 1
 position = Vector2(1757, 27)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_4axyd")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

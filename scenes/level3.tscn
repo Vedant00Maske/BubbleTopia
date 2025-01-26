@@ -865,4 +865,5 @@ position = Vector2(73, 573)
 offset = Vector2(0, 1024)
 transform = Transform2D(1, 0, 0, 1, 0, 1024)
 
+[connection signal="hit_laser" from="GolemBoss" to="." method="_on_golem_boss_hit_laser"]
 [connection signal="hit_player3" from="GolemBoss" to="." method="_on_golem_boss_hit_player_3"]

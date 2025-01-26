@@ -10,7 +10,11 @@ func _ready():
 	var ui = $HUD_Level_3  # Adjust path as needed
 	player.lives_changed.connect(ui.update_lives)
 
-
-
 func _on_golem_boss_hit_player_3() -> void:
+	emit_signal("player_damaged")
+	
+
+
+
+func _on_golem_boss_hit_laser() -> void:
 	emit_signal("player_damaged")
