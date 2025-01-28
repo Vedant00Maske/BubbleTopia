@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dqmwhcdu63eh0"]
+[gd_scene load_steps=26 format=3 uid="uid://dqmwhcdu63eh0"]
 
 [ext_resource type="Texture2D" uid="uid://q2t0i05b0cwo" path="res://tf_atlantis_tiles.png" id="1_6cn2x"]
 [ext_resource type="Script" path="res://scripts/level_3.gd" id="1_66tn3"]
@@ -39,7 +39,7 @@ texture = ExtResource("1_6cn2x")
 30:1/0 = 0
 32:1/0 = 0
 1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.125, -2.625, 3.5, -2.125, 5.375, 2.125, 5.375, 4, -5.75, 4.25)
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.375, -1.625, 4.75, -6.375, 4.75, 2.125, 3.5, 4.25, -4.5, 2.625)
 3:2/0 = 0
@@ -834,6 +834,18 @@ sources/1 = SubResource("TileSetAtlasSource_81hlq")
 sources/2 = SubResource("TileSetAtlasSource_7jmi5")
 sources/3 = SubResource("TileSetAtlasSource_27wl8")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlk7f"]
+size = Vector2(178.5, 1013)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7oje"]
+size = Vector2(1926, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6micn"]
+size = Vector2(1911, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wagx2"]
+size = Vector2(1029.5, 151)
+
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_66tn3")
 
@@ -876,6 +888,31 @@ transform = Transform2D(1, 0, 0, 1, 0, 1024)
 texture_filter = 1
 position = Vector2(158, 80)
 texture = ExtResource("11_4wlu7")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-99.2498, 516.5)
+shape = SubResource("RectangleShape2D_tlk7f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(953, -33.5)
+shape = SubResource("RectangleShape2D_y7oje")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(969.5, 1055.5)
+shape = SubResource("RectangleShape2D_6micn")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(2011.5, 521.25)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_wagx2")
 
 [connection signal="hit_laser" from="GolemBoss" to="." method="_on_golem_boss_hit_laser"]
 [connection signal="hit_player3" from="GolemBoss" to="." method="_on_golem_boss_hit_player_3"]

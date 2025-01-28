@@ -22,4 +22,5 @@ func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if $switch/AnimatedSprite2D.frame == 0:
 		Dialogic.start("door_switch")
 	else:
+		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file("res://scenes/level3.tscn")
