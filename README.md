@@ -50,11 +50,8 @@ Download the latest version of **BubbleTopia** here:
 ---
 
 ## 🚀 Team  
-Shyam Modi
-Vedant Maske
-Dhruv Patel
-Aadi Patel
-Yagyansh Gupta
+Shyam Modi | Vedant Maske | Dhruv Patel | Aadi Patel | Yagyansh Gupta
+
 
 ---
 
