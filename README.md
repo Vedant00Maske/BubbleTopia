@@ -35,7 +35,7 @@ Will Caspian rise to the challenge and win Marina’s heart, or will he be lost 
 
 ![BubbleTopia Gameplay]([./images/gameplay1.png](https://github.com/Vedant00Maske/BubbleTopia/blob/main/Screenshot%202025-01-30%20165847.png?raw=true))  
 ![Boss Battle](./images/bossfight.png)  
-![Puzzle Level](./images/puzzlelevel.png)  
+![Puzzle Level]([./images/puzzlelevel.png](https://github.com/Vedant00Maske/BubbleTopia/blob/main/Screenshot%202025-01-30%20170031.png?raw=true))  
 
 ---
 
